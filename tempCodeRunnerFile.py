@@ -1,0 +1,1 @@
+are_nubmers_ascending(a)

@@ -43,26 +43,41 @@
 # print(natija:= merge_unique_ids(active_users,new_users))
 
 #                4-masala
-def sorted_by_price(products:list) -> list:
-    return sorted(products, key=lambda x: int(x[1]), reverse=True)
+# def sorted_by_price(products:list) -> list:
+#     return sorted(products, key=lambda x: int(x[1]), reverse=True)
 
 
 
 
-products = [
-    ('Olma', '12000', '50'),
-    ('Banan', '8000', '100'),
-    ('Gilos', '15000', '70'),
-    ('Apelsin', '9000', '80'),
-    ('Anor', '30000', '20'),
-    ('Uzum', '20000', '40'),
-    ('Tarvuz', '25000', '15'),
-    ('Shaftoli', '18000', '60'),
-    ('Qovun', '40000', '25'),
-    ('Qulupnay', '35000', '10')
-]
+# products = [
+#     ('Olma', '12000', '50'),
+#     ('Banan', '8000', '100'),
+#     ('Gilos', '15000', '70'),
+#     ('Apelsin', '9000', '80'),
+#     ('Anor', '30000', '20'),
+#     ('Uzum', '20000', '40'),
+#     ('Tarvuz', '25000', '15'),
+#     ('Shaftoli', '18000', '60'),
+#     ('Qovun', '40000', '25'),
+#     ('Qulupnay', '35000', '10')
+# ]
 
-print(natija := sorted_by_price(products))
+# print(natija := sorted_by_price(products))
+
+#                 5-masala
+def are_nubmers_ascending(text: str)-> bool:
+    lst = []
+   
+    for i in text.split():
+        if i.isdigit():
+            lst.append(int(i))
+        
+    for i in range(1, len(lst)):
+        if lst[i - 1] >= lst[i]:
+            return False
+    return True
+a = "1 qutida 5 ta yashil, 9 ta qizil, 12 ta sariq to'p bor edi"
+print(are_nubmers_ascending(a))
 
 
 
